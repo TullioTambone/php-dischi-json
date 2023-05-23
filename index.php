@@ -22,7 +22,7 @@
 
         <body>
             <div class="overlay">
-                <button type="button" class="btn-close" @click="closeOverlay()"></button>
+                <button type="button" class="btn-close text-white" @click="closeOverlay()"></button>
                 <div class="text-white text-center">
                     <img :src="`${this.counter.poster}`" alt="" style="width: 200px">
                     <h5 class="m-0 mt-2">{{this.counter.title}}</h5>

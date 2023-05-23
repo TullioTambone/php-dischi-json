@@ -45,5 +45,5 @@ nav,
     position: absolute;
     top: 20px;
     right: 20px;
-    color: white !important;
+    filter: invert(100%);
 }
