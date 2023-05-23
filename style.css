@@ -7,11 +7,43 @@ img{
     width: 100%;
     display: block;
 }
+
 body{
     background-color: #1d2d3c;
+}
+
+nav{
+    position: relative;
 }
 
 nav,
 .card{
     background-color: #06131f;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    transition: 0.5s ease;
+    box-shadow: 0 0 30px #1ed760;
+    position: relative;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.overlay{
+    position: fixed;
+    inset: 10px;
+    background-color: rgba(29,45,60, 0.9);
+    z-index: 0;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white !important;
 }

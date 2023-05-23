@@ -14,16 +14,28 @@
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">
-                        <img src="" alt="">logo
+                        <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Green.png" alt="" style="width: 150px">
                     </a>
                 </div>
             </nav>
         </header>
 
         <body>
+            <div class="overlay">
+                <button type="button" class="btn-close" @click="closeOverlay()"></button>
+                <div class="text-white text-center">
+                    <img :src="`${this.counter.poster}`" alt="" style="width: 200px">
+                    <h5 class="m-0 mt-2">{{this.counter.title}}</h5>
+                    <span>{{this.counter.author}}</span>
+                    <h6>{{this.counter.year}}</h6>
+                </div>
+            </div>
             <div class="container my-4">
                 <div class="row gap-2 m-auto justify-content-center">
-                    <div class="card col-12 col-md-5 col-lg-3 text-center text-white p-3" v-for="(element, index) in data" :key="index">
+                    <div class="card col-12 col-md-5 col-lg-3 text-center text-white p-3" 
+                    v-for="(element, index) in data" 
+                    :key="index"
+                    @click="openOverlay(data[index])">
                         <img :src="`${element.poster}`" alt="">
                         <h5 class="m-0 mt-2">{{element.title}}</h5>
                         <span>{{element.author}}</span>

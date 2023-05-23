@@ -4,7 +4,8 @@ createApp({
   data() {
     return {
       apiUrl: 'server.php',
-      data: ''
+      data: '',
+      counter: '',
     }
   },
   mounted(){
@@ -16,6 +17,15 @@ createApp({
       .then((res) => {
         this.data = res.data
       });
+    },
+    openOverlay(i){
+      this.counter = i
+      document.querySelector('.overlay').style.opacity = 1;
+      document.querySelector('.overlay').style.zIndex = 999;
+    },
+    closeOverlay(){
+      document.querySelector('.overlay').style.opacity = 0;
+      document.querySelector('.overlay').style.zIndex = 0;
     }
   }
 
