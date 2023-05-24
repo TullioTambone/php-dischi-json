@@ -24,10 +24,10 @@
             <div class="overlay">
                 <button type="button" class="btn-close text-white" @click="closeOverlay()"></button>
                 <div class="text-white text-center">
-                    <img :src="`${this.counter.poster}`" alt="" style="width: 200px">
-                    <h5 class="m-0 mt-2">{{this.counter.title}}</h5>
-                    <span>{{this.counter.author}}</span>
-                    <h6>{{this.counter.year}}</h6>
+                    <img :src="`${counter.poster}`" alt="" style="width: 200px">
+                    <h5 class="m-0 mt-2">{{counter.title}}</h5>
+                    <span>{{counter.author}}</span>
+                    <h6>{{counter.year}}</h6>
                 </div>
             </div>
             <div class="container my-4">
@@ -35,7 +35,7 @@
                     <div class="card col-12 col-md-5 col-lg-3 text-center text-white p-3" 
                     v-for="(element, index) in data" 
                     :key="index"
-                    @click="openOverlay(data[index])">
+                    @click="openOverlay(index)">
                         <img :src="`${element.poster}`" alt="">
                         <h5 class="m-0 mt-2">{{element.title}}</h5>
                         <span>{{element.author}}</span>

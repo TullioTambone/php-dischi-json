@@ -44,5 +44,20 @@ $dischi = [
   ],
 ];
 
+$result = [];
+
+//condizione per ottenere un solo dato
+if( isset($_GET['indice']) && $_GET['indice'] !== '' ){
+  //variabile per salvare l'indice dal main.js
+  $indice_disco = $_GET['indice'];
+  
+   //ricavo l'indice
+   $singoloDisco = $dischi[$indice_disco];
+   $result = $singoloDisco;
+
+  } else {
+    $result = $dischi;
+};
+
 header('content.type: application/json');
-echo json_encode($dischi);
+echo json_encode($result);
