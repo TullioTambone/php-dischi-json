@@ -51,9 +51,9 @@ if( isset($_GET['indice']) && $_GET['indice'] !== '' ){
   //variabile per salvare l'indice dal main.js
   $indice_disco = $_GET['indice'];
   
-   //ricavo l'indice
-   $singoloDisco = $dischi[$indice_disco];
-   $result = $singoloDisco;
+  //ricavo l'indice
+  $singoloDisco = $dischi[$indice_disco];
+  $result = $singoloDisco;
 
   } else {
     $result = $dischi;

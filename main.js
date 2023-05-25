@@ -6,7 +6,6 @@ createApp({
       apiUrl: 'server.php',
       data: '',
       counter: '',
-      indice: '',
     }
   },
   mounted(){
@@ -25,16 +24,13 @@ createApp({
 
       //prendo il dato tramite chiamata axios
       //informazione che inviamo in post al sever
-      // const indice = {
-      //   indiceDisco: i
-      // }
-      this.indice = {
-        i
+      const payload = {
+        indice: i
       }
+
       //chiamata axios per il dato
       
-      axios.get(this.apiUrl, this.indice, {header: {'Content-Type':'multipart/form-data'}})
-      .then((res) => {
+      axios.get(this.apiUrl + "?indice=" + i).then((res) => {
         this.counter = res.data;
       })
       
